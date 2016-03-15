@@ -1,0 +1,50 @@
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+	font-size: 24px;
+	line-height: 30px;
+	color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 60px;
+}
+
+h1 {
+  font-size: 23.5px;
+}
+
+h2 {
+  font-size: 34.5px;
+}
+
+h3 {
+  font-size: 28.5px;
+}
+
+h4 {
+  font-size: 19.5px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14.9px;
+}
