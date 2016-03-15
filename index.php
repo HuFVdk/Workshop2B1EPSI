@@ -1,29 +1,30 @@
 <?php include('includes/header.html'); ?>
-  <body>
 
     <div class="container">
 
       <?php include('includes/navbar.html'); ?>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+      <div class="row">
+        <h1><strong>Bienvenue à bord Humain!</strong></h1>
+          <div class="col-xs-6 col-md-4">
+            <h3>Embarque à bord de mon vaisseau et aide-moi à éliminer ces envahisseurs ! ces
+            satané aliens veulent attérrirent sur terre pour voler nos ressources, nous devons les arréter,</h3></div>
+          <div class="col-xs-12 col-md-8"><img src="pictures/spaceship.png" class="img-responsive" alt="Responsive image"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <img src="pictures/planete.png" class="img-responsive" alt="Responsive image"></div>
+        <div class="col-xs-12 col-md-8"><h3>Les envahiseurs entent t'attérirent sur ma planête pour voler mes ressources, nous deons donc les arréter,</h3></div>
+      </div>
+      <div class="row">
+        <h1><strong>Bienvenue à bord Humain!</strong></h1>
+          <div class="col-xs-6 col-md-4">
+            <h3>Embarque à bord de mon vaisseau et aide-moi à éliminer ces envahisseurs ! ces
+            satané aliens veulent attérrirent sur terre pour voler nos ressources, nous devons les arréter,</h3></div>
+          <div class="col-xs-12 col-md-8"><img src="pictures/love-alien.png" class="img-responsive" alt="Responsive image"></div>
       </div>
 
+    </div>
+
     </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+<?php include('includes/footer.html'); ?>

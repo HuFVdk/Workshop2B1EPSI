@@ -1,3 +1,15 @@
+@font-face {
+    font-family: space-age;
+    src: url(../fonts/aspace.otf);
+}
 body {
     background-image: url("../pictures/background.png");
+    font-family: "space-age";
+    color: white;
+}
+section {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 1;
 }
