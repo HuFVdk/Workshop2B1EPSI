@@ -9,14 +9,14 @@
         <canvas id="gameCanvas"></canvas>
         </div>
         <div id="info">
-            <p>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace. Les envahisseurs accélérent leur cadence de tir au fur et à mesure 
-            </p>
+            <h4>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace, Les envahisseurs accélérent leur cadence de tir au fur et à mesure </h4>
+            <h4>Appuyez sur P pour mettre le jeu en pause.</h4>
    
-                <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
-                <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a> | <a href="http://www.dwmkerr.com">dwmkerr.com</a></p>
+                <i class="fa fa-github fa-2x"></i> <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
+                <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a></p>
         </div>
 
-        <script src="spaceinvaders-master/js/spaceinvaders.js"></script>
+        <script src="js/spaceinvaders.js"></script>
         <script>
 
             //  Initialisation de canvas

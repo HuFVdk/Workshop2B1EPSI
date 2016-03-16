@@ -200,12 +200,12 @@ WelcomeState.prototype.draw = function(game, dt, ctx) {
     //  Clear the background.
     ctx.clearRect(0, 0, game.width, game.height);
 
-    ctx.font="30px Arial";
+    ctx.font="30px aspace";
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="center"; 
     ctx.textAlign="center"; 
     ctx.fillText("Qu'est ce qui se passe dans l'espace ?!", game.width / 2, game.height/2 - 40);
-    ctx.font="16px Arial";
+    ctx.font="16px aspace";
 
     ctx.fillText("Pressez 'Espace' pour lancer la partie.", game.width / 2, game.height/2);
 };
@@ -233,15 +233,15 @@ GameOverState.prototype.draw = function(game, dt, ctx) {
     //Restaurer l'arrière plan
     ctx.clearRect(0, 0, game.width, game.height);
 
-    ctx.font="50px Arial";
+    ctx.font="50px aspace";
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="center"; 
     ctx.textAlign="center"; 
     ctx.fillText("Fin de la partie!", game.width / 2, game.height/2 - 40);
-    ctx.font="16px Arial";
-    ctx.fillText("Votre score est de " + game.score + " vous avez atteint le niveau " + game.niveau, game.width / 2, game.height/2);
-    ctx.font="16px Arial";
-    ctx.fillText("Pressez Espace pour jouer de nouveau.", game.width / 2, game.height/2 + 40);
+    ctx.font="16px aspace";
+    ctx.fillText("Votre score est de " + game.score + ", vous avez atteint le niveau " + game.niveau, game.width / 2, game.height/2);
+    ctx.font="16px aspace";
+    ctx.fillText("Pressez 'Espace' pour jouer de nouveau.", game.width / 2, game.height/2 + 40);
 };
 
 GameOverState.prototype.keyDown = function(game, keyCode) {
@@ -522,7 +522,7 @@ PlayState.prototype.draw = function(game, dt, ctx) {
 
     //  Draw info.
     var textYpos = game.gameBounds.bottom + ((game.height - game.gameBounds.bottom) / 2) + 14/2;
-    ctx.font="14px Arial";
+    ctx.font="20px aspace";
     ctx.fillStyle = '#ffffff';
     var info = "Vies: " + game.lives;
     ctx.textAlign = "left";
@@ -589,11 +589,11 @@ PauseState.prototype.draw = function(game, dt, ctx) {
     //  Clear the background.
     ctx.clearRect(0, 0, game.width, game.height);
 
-    ctx.font="14px Arial";
+    ctx.font="14px aspace";
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="middle";
     ctx.textAlign="center";
-    ctx.fillText("Paused", game.width / 2, game.height/2);
+    ctx.fillText("Pause", game.width / 2, game.height/2);
     return;
 };
 
