@@ -524,10 +524,10 @@ PlayState.prototype.draw = function(game, dt, ctx) {
     var textYpos = game.gameBounds.bottom + ((game.height - game.gameBounds.bottom) / 2) + 14/2;
     ctx.font="14px Arial";
     ctx.fillStyle = '#ffffff';
-    var info = "Lives: " + game.lives;
+    var info = "Vies: " + game.lives;
     ctx.textAlign = "left";
     ctx.fillText(info, game.gameBounds.left, textYpos);
-    info = "Score: " + game.score + ", niveau: " + game.niveau;
+    info = "Score: " + game.score + " - Niveau: " + game.niveau;
     ctx.textAlign = "right";
     ctx.fillText(info, game.gameBounds.right, textYpos);
 
@@ -638,9 +638,9 @@ niveauIntroState.prototype.draw = function(game, dt, ctx) {
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="middle"; 
     ctx.textAlign="center"; 
-    ctx.fillText("niveau " + this.niveau, game.width / 2, game.height/2);
+    ctx.fillText("Niveau " + this.niveau, game.width / 2, game.height/2);
     ctx.font="24px Arial";
-    ctx.fillText("Ready in " + this.countdownMessage, game.width / 2, game.height/2 + 36);      
+    ctx.fillText("Lancement dans " + this.countdownMessage, game.width / 2, game.height/2 + 36);      
     return;
 };
 

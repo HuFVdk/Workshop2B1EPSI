@@ -4,25 +4,55 @@
 
       <?php include('includes/navbar.html'); ?>
 
-      <div class="row">
-        <h1><strong>Bienvenue à bord Humain!</strong></h1>
-          <div class="col-xs-6 col-md-4">
-            <h3>Embarque à bord de mon vaisseau et aide-moi à éliminer ces envahisseurs ! ces
-            satané aliens veulent attérrirent sur terre pour voler nos ressources, nous devons les arréter,</h3></div>
-          <div class="col-xs-12 col-md-8"><img src="pictures/spaceship.png" class="img-responsive" alt="Responsive image"></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-md-4">
-          <img src="pictures/planete.png" class="img-responsive" alt="Responsive image"></div>
-        <div class="col-xs-12 col-md-8"><h3>Les envahiseurs entent t'attérirent sur ma planête pour voler mes ressources, nous deons donc les arréter,</h3></div>
-      </div>
-      <div class="row">
-        <h1><strong>Bienvenue à bord Humain!</strong></h1>
-          <div class="col-xs-6 col-md-4">
-            <h3>Embarque à bord de mon vaisseau et aide-moi à éliminer ces envahisseurs ! ces
-            satané aliens veulent attérrirent sur terre pour voler nos ressources, nous devons les arréter,</h3></div>
-          <div class="col-xs-12 col-md-8"><img src="pictures/love-alien.png" class="img-responsive" alt="Responsive image"></div>
-      </div>
+<div id="starfield"></div>
+        <div id="gamecontainer">
+        <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="info">
+            <p>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace. Les envahisseurs accélérent leur cadence de tir au fur et à mesure 
+            </p>
+   
+                <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
+                <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a> | <a href="http://www.dwmkerr.com">dwmkerr.com</a></p>
+        </div>
+
+        <script src="spaceinvaders-master/js/spaceinvaders.js"></script>
+        <script>
+
+            //  Initialisation de canvas
+            var canvas = document.getElementById("gameCanvas");
+            canvas.width = 800;
+            canvas.height = 600;
+
+            //  Crée le jeu.
+            var game = new Game();
+
+            //  Initialise le jeu
+            game.initialise(canvas);
+
+            // Lance le jeu
+            game.start();
+
+            //  Evenementielle du clavier
+            window.addEventListener("keydown", function keydown(e) {
+                var keycode = e.which || window.event.keycode;
+                //  intégration des trois commandes (37 = Gauche,39=Droite,32=Espace)
+                if(keycode == 37 || keycode == 39 || keycode == 32) {
+                    e.preventDefault();
+                }
+                game.keyDown(keycode);
+            });
+            window.addEventListener("keyup", function keydown(e) {
+                var keycode = e.which || window.event.keycode;
+                game.keyUp(keycode);
+            });
+
+           
+        </script>
+        <script type="text/javascript">
+
+
+</script>
 
     </div>
 
