@@ -190,11 +190,6 @@ WelcomeState.prototype.enter = function(game) {
     game.sounds.loadSound('explosion', 'sounds/explosion.wav');
 };
 
-WelcomeState.prototype.update = function (game, dt) {
-
-
-};
-
 WelcomeState.prototype.draw = function(game, dt, ctx) {
 
     //  Clear the background.
@@ -223,10 +218,6 @@ WelcomeState.prototype.keyDown = function(game, keyCode) {
 function GameOverState() {
 
 }
-
-GameOverState.prototype.update = function(game, dt) {
-
-};
 
 GameOverState.prototype.draw = function(game, dt, ctx) {
 
@@ -589,7 +580,7 @@ PauseState.prototype.draw = function(game, dt, ctx) {
     //  Clear the background.
     ctx.clearRect(0, 0, game.width, game.height);
 
-    ctx.font="14px aspace";
+    ctx.font="20px aspace";
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="middle";
     ctx.textAlign="center";
@@ -634,12 +625,12 @@ niveauIntroState.prototype.draw = function(game, dt, ctx) {
     //  Clear the background.
     ctx.clearRect(0, 0, game.width, game.height);
 
-    ctx.font="36px Arial";
+    ctx.font="36px aspace";
     ctx.fillStyle = '#ffffff';
     ctx.textBaseline="middle"; 
     ctx.textAlign="center"; 
     ctx.fillText("Niveau " + this.niveau, game.width / 2, game.height/2);
-    ctx.font="24px Arial";
+    ctx.font="24px aspace";
     ctx.fillText("Lancement dans " + this.countdownMessage, game.width / 2, game.height/2 + 36);      
     return;
 };

@@ -11,6 +11,7 @@
         <div id="info">
             <h4>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace, Les envahisseurs accélérent leur cadence de tir au fur et à mesure </h4>
             <h4>Appuyez sur P pour mettre le jeu en pause.</h4>
+            <h2><a id="muteLink" href="#" onclick="toggleMute()"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a> <a href=""><span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span></a></h2>
    
                 <i class="fa fa-github fa-2x"></i> <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
                 <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a></p>
@@ -46,7 +47,11 @@
                 var keycode = e.which || window.event.keycode;
                 game.keyUp(keycode);
             });
-
+            
+            function toggleMute() {
+                game.mute();
+                document.getElementById("muteLink").innerHTML = game.sounds.mute ? '<h2><span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span></h2>' : '<h2><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></h2>';
+            }
            
         </script>
         <script type="text/javascript">
