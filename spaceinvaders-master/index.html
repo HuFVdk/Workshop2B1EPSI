@@ -1,12 +1,46 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Space Invaders</title>
-        <link rel="stylesheet" type="text/css" href="css/core.css">
+  
+
+		<head>
+        <title>Qu'est ce qui se passe dans l'Espace</title>
+		<meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/typeography.css">
-        <style>
+		</head>
+		<style>
     
-            
+            /* Pagination */
+            body, html { 
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            }
+
+            #starfield {
+                width:100%;
+                height:100%;
+                z-index: -1;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            #gamecontainer {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #gamecanvas { 
+                width: 800px;
+                height: 600px;
+            }
+            #info {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
     <body>
@@ -15,39 +49,41 @@
         <canvas id="gameCanvas"></canvas>
         </div>
         <div id="info">
-            <p></p>
-            <p><a id="muteLink" href="#" onclick="toggleMute()">mute</a> | 
-                <</a></p>
+            <p>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace. Les envahisseurs accélérent leur cadence de tir au fur et à mesure 
+            </p>
+   
+                <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
+                <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a> | <a href="http://www.dwmkerr.com">dwmkerr.com</a></p>
         </div>
 
         <script src="js/starfield.js"></script>
         <script src="js/spaceinvaders.js"></script>
         <script>
 
-            //  Create the starfield.
+            //  Création de la zone spatiale.
             var container = document.getElementById('starfield');
             var starfield = new Starfield();
             starfield.initialise(container);
             starfield.start();
 
-            //  Setup the canvas.
+            //  Initialisation de canvas
             var canvas = document.getElementById("gameCanvas");
             canvas.width = 800;
             canvas.height = 600;
 
-            //  Create the game.
+            //  Crée le jeu.
             var game = new Game();
 
-            //  Initialise it with the game canvas.
+            //  Initialise le jeu
             game.initialise(canvas);
 
-            //  Start the game.
+            // Lance le jeu
             game.start();
 
-            //  Listen for keyboard events.
+            //  Evenementielle du clavier
             window.addEventListener("keydown", function keydown(e) {
                 var keycode = e.which || window.event.keycode;
-                //  Supress further processing of left/right/space (37/29/32)
+                //  intégration des trois commandes (37 = Gauche,39=Droite,32=Espace)
                 if(keycode == 37 || keycode == 39 || keycode == 32) {
                     e.preventDefault();
                 }
@@ -58,22 +94,10 @@
                 game.keyUp(keycode);
             });
 
-            function toggleMute() {
-                game.mute();
-                document.getElementById("muteLink").innerText = game.sounds.mute ? "unmute" : "mute";
-            }
+           
         </script>
         <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-41728580-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
 </script>
     </body>

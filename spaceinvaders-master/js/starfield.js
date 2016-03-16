@@ -1,9 +1,6 @@
-/*
-	Starfield lets you take a div and turn it into a starfield.
 
-*/
 
-//	Define the starfield class.
+//	Classe Espace
 function Starfield() {
 	this.fps = 60;
 	this.canvas = null;
@@ -15,11 +12,9 @@ function Starfield() {
 	this.intervalId = 0;
 }
 
-//	The main function - initialises the starfield.
+//	Initialisation de l'objet
 Starfield.prototype.initialise = function(div) {
 	var self = this;
-
-	//	Store the div.
 	this.containerDiv = div;
 	self.width = window.innerWidth;
 	self.height = window.innerHeight;
@@ -32,7 +27,7 @@ Starfield.prototype.initialise = function(div) {
 		self.draw();
  	}
 
-	//	Create the canvas.
+	//	Création du canvas
 	var canvas = document.createElement('canvas');
 	div.appendChild(canvas);
 	this.canvas = canvas;
@@ -42,7 +37,7 @@ Starfield.prototype.initialise = function(div) {
 
 Starfield.prototype.start = function() {
 
-	//	Create the stars.
+	//	Création des étoiles
 	var stars = [];
 	for(var i=0; i<this.stars; i++) {
 		stars[i] = new Star(Math.random()*this.width, Math.random()*this.height, Math.random()*3+1,
@@ -51,7 +46,7 @@ Starfield.prototype.start = function() {
 	this.stars = stars;
 
 	var self = this;
-	//	Start the timer.
+
 	this.intervalId = setInterval(function() {
 		self.update();
 		self.draw();	
@@ -68,9 +63,9 @@ Starfield.prototype.update = function() {
 	for(var i=0; i<this.stars.length; i++) {
 		var star = this.stars[i];
 		star.y += dt * star.velocity;
-		//	If the star has moved from the bottom of the screen, spawn it at the top.
+		//Gére le défilement des étoiles(de haut en bas) //
 		if(star.y > this.height) {
-			this.stars[i] = new Star(Math.random()*this.width, 0, Math.random()*3+1, 
+			this.stars[i] = new Star(Math.random()*this.width, 0, Math.random()*9+1,
 		 	(Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
 		}
 	}
@@ -78,14 +73,14 @@ Starfield.prototype.update = function() {
 
 Starfield.prototype.draw = function() {
 
-	//	Get the drawing context.
+	//	Dimension de la modélisation (2D ici)
 	var ctx = this.canvas.getContext("2d");
 
-	//	Draw the background.
+	//	Arrière-plan
  	ctx.fillStyle = '#000000';
 	ctx.fillRect(0, 0, this.width, this.height);
 
-	//	Draw stars.
+	//	Intialise les étoiles
 	ctx.fillStyle = '#ffffff';
 	for(var i=0; i<this.stars.length;i++) {
 		var star = this.stars[i];
