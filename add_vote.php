@@ -23,6 +23,7 @@ include "includes/db_connect.php";
       $requete->execute(array(
         'ip' => $_GET['ip']
         ));
-  
+        
+      header('Location: index.php');
 }
 ?>
