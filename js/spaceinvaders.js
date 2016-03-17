@@ -229,7 +229,7 @@ GameOverState.prototype.draw = function(game, dt, ctx) {
     ctx.textBaseline="center"; 
     ctx.textAlign="center"; 
     ctx.fillText("Fin de la partie!", game.width / 2, game.height/2 - 40);
-    document.getElementById("envoyerScore").href = "traitement.php?id=" + game.score;
+    document.getElementById("envoyerScore").href = "savescore.php?score=" + game.score;
     ctx.font="16px aspace";
     ctx.fillText("Votre score est de " + game.score + ", vous avez atteint le niveau " + game.niveau, game.width / 2, game.height/2);
     ctx.font="16px aspace";

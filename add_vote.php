@@ -5,7 +5,7 @@ include "includes/db_connect.php";
 
 //On select les email de la table intervenant pour vérifier que l'adresse e-mail existe
 
-        $reponse = $bdd->query("SELECT vote_ip FROM vote WHERE vote_ip = '".$_GET["ip"]."'");
+        $reponse = $bdd->query("SELECT vote_pseudo FROM vote WHERE vote_pseudo = '".$_GET["pseudo"]."'");
         $reponse->execute();
         $donnees = $reponse->fetch();
         $reponse->closeCursor();
@@ -19,9 +19,9 @@ include "includes/db_connect.php";
 //Si elle n'existe pas alors on enregistre l'intervenant
     else {
     //Insertion des informations de l'intervenant
-      $requete = $bdd->prepare('INSERT INTO vote(vote_ip) VALUES(:ip)');
+      $requete = $bdd->prepare('INSERT INTO vote(vote_pseudo) VALUES(:pseudo)');
       $requete->execute(array(
-        'ip' => $_GET['ip']
+        'pseudo' => $_GET['pseudo']
         ));
         
       header('Location: index.php');

@@ -20,8 +20,8 @@
             <h4>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace, Les envahisseurs accélérent leur cadence de tir au fur et à mesure </h4>
             <h4>Appuyez sur P pour mettre le jeu en pause.</h4>
             <h2><a id="muteLink" href="#" onclick="toggleMute()"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a> 
-                <a href="add_vote.php?ip=<?php echo $_SERVER["REMOTE_ADDR"] ?>"><span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span></a> <?php echo '' . $votes['countid'] . ''; ?></h2> 
-                <p>(Ne fonctionne pas avec un proxy !)</p>
+                <a href="add_vote.php?pseudo=<?php echo ''.$_SESSION['pseudo'].''?>"><span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span></a> <?php echo '' . $votes['countid'] . ''; ?></h2> 
+                <p>(Vous devez être inscrit et connecter !)</p>
    
                 <i class="fa fa-github fa-2x"></i> <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
                 <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a></p>
