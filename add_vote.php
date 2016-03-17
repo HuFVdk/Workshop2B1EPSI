@@ -14,7 +14,7 @@ include "includes/db_connect.php";
   if ($donnees) {
 
       //On redirige l'intervenant en cas d'erruer
-      header('Location: error1.php');
+      header('Location: error.php');
 }
 //Si elle n'existe pas alors on enregistre l'intervenant
     else {

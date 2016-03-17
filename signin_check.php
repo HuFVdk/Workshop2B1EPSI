@@ -28,6 +28,6 @@ else
 
 //Si les champs ne sont pas remplis alors on affiche un message d'erreur
 else {
-  header('Location: error2.php');
+  header('Location: error.php');
 }
 ?>
