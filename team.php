@@ -1,8 +1,9 @@
+<?php session_start (); ?>
 <?php include('includes/header.html'); ?>
 
 <div class="container">
 
-    <?php include('includes/navbar.html'); ?>
+    <?php include('includes/navbar.php'); ?>
 
     <div class="heading">
         <h2>Notre <strong>équipe</strong></h2>

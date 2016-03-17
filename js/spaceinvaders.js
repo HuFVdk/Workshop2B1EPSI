@@ -207,7 +207,7 @@ WelcomeState.prototype.draw = function(game, dt, ctx) {
 
 WelcomeState.prototype.keyDown = function(game, keyCode) {
     if(keyCode == 32) /*space*/ {
-        //  Space starts the game.
+        //  Appuyer sur Espace démarre la partie
         game.niveau = 1;
         game.score = 0;
         game.lives = 3;
@@ -264,7 +264,7 @@ function PlayState(config, niveau) {
 
 PlayState.prototype.enter = function(game) {
 
-    //  Create the vaisseau.
+    //  Création du vaisseau
     this.vaisseau = new vaisseau(game.width / 2, game.gameBounds.bottom);
 
     //  Setup initial state.

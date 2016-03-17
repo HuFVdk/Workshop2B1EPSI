@@ -15,6 +15,19 @@
               <li><a href="about.php">A propos</a></li>
               <li><a href="team.php">L'équipe</a></li>
             </ul>
+            <?php if (isset($_SESSION['pseudo'])) { ?>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="profile.php?id=<?php echo ''.$_SESSION['id'].''?>"><?php echo 'Bonjour, '.$_SESSION['pseudo'].''?></a></li>
+              <li><a href="signout.php">Se deconnecter</a></li>
+            </ul>
+            <?php
+          }
+          else { ?>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="signup.php">S'inscrire</a></li>
+              <li><a href="signin.php">Se connecter</a></li>
+            </ul>
+          <?php } ?>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
