@@ -12,12 +12,12 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="about.php">A propos</a></li>
+              <li><a href="history.php">L'histoire</a></li>
               <li><a href="team.php">L'équipe</a></li>
             </ul>
             <?php if (isset($_SESSION['pseudo'])) { ?>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="profile.php?id=<?php echo ''.$_SESSION['id'].''?>"><?php echo 'Bonjour, '.$_SESSION['pseudo'].''?></a></li>
+              <li><a href="profile.php"><?php echo 'Bonjour, '.$_SESSION['pseudo'].''?></a></li>
               <li><a href="signout.php">Se deconnecter</a></li>
             </ul>
             <?php

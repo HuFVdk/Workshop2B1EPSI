@@ -1,3 +1,4 @@
+<?php session_start (); ?>
 <?php include('includes/header.html'); ?>
 
     <div class="container">

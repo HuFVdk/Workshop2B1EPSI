@@ -14,7 +14,7 @@
 <div id="starfield"></div>
         <div id="gamecontainer">
         <canvas id="gameCanvas"></canvas>
-        <a id="envoyerScore" href="">Envoyez votre score.</a>
+        <a id="envoyerScore" class="btn btn-default btn-lg active" role="button" href="">Enregistrer votre score</a>
         </div>
         <div id="info">
             <h4>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace, Les envahisseurs accélérent leur cadence de tir au fur et à mesure </h4>
@@ -22,9 +22,18 @@
             <h2><a id="muteLink" href="#" onclick="toggleMute()"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></a> 
                 <a href="add_vote.php?pseudo=<?php echo ''.$_SESSION['pseudo'].''?>"><span class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span></a> <?php echo '' . $votes['countid'] . ''; ?></h2> 
                 <p>(Vous devez être inscrit et connecter !)</p>
-   
-                <i class="fa fa-github fa-2x"></i> <a href="https://github.com/HuFVdk/Workshop2B1EPSI">"Qu'est ce qui se passe dans l'espace" sur Github</a> | 
-                <a href="http://epsi.fr">Sponsorisé par l'EPSI,l'école d'ingénierie Informatique</a></p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="hugo.leroux33@gmail.com">
+<input type="hidden" name="lc" value="FR">
+<input type="hidden" name="item_name" value="QLF Invader">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
+
         </div>
 
         <script src="js/spaceinvaders.js"></script>

@@ -22,7 +22,7 @@ if ($resultat)
 }
 else
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+      header('Location: error.php');
 }
 }
 

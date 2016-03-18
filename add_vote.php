@@ -3,6 +3,7 @@ session_start();
 //Con    session_start();nexion a la BDD
 include "includes/db_connect.php";
 
+if (isset($_SESSION['id'])) {
 //On select les email de la table intervenant pour vérifier que l'adresse e-mail existe
 
         $reponse = $bdd->query("SELECT vote_pseudo FROM vote WHERE vote_pseudo = '".$_GET["pseudo"]."'");
@@ -25,5 +26,9 @@ include "includes/db_connect.php";
         ));
         
       header('Location: index.php');
+}
+}
+else {
+  header('Location: error.php');
 }
 ?>

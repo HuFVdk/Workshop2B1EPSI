@@ -15,9 +15,9 @@
       <table class="table"> 
         <caption><h2>Les meilleurs joueurs:</h2></caption> 
         <thead> 
-          <tr>  
-            <th>Pseudo</th> 
-            <th>Score</th> 
+          <tr> 
+            <th><h3>Pseudo</h3></th> 
+            <th><h3>Score</h3></th> 
         </tr> 
       </thead>
       <tbody>
@@ -29,7 +29,7 @@ $reponse = $bdd->query('SELECT util_pseudo, util_highscore FROM utilisateur ORDE
 while ($donnees = $reponse->fetch())
 {
   ?>
-        <tr> 
+        <tr>
           <th><?php echo $donnees['util_pseudo']; ?></th> 
           <td><?php echo $donnees['util_highscore']; ?></td> 
         </tr> 
