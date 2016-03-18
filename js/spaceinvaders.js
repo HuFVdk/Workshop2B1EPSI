@@ -510,7 +510,7 @@ PlayState.prototype.draw = function(game, dt, ctx) {
     ctx.fillStyle = '#ff0000';
     for(var i=0; i<this.missiles.length; i++) {
         var missile = this.missiles[i];
-        ctx.fillRect(missile.x, missile.y - 2, 1, 4);
+        ctx.fillRect(missile.x, missile.y - 3, 3, 3);
     }
 
     //  Draw info.
