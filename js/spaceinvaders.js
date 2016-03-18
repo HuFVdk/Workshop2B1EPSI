@@ -188,6 +188,7 @@ WelcomeState.prototype.enter = function(game) {
     game.sounds.loadSound('shoot', 'sounds/shoot.wav');
     game.sounds.loadSound('bang', 'sounds/bang.wav');
     game.sounds.loadSound('explosion', 'sounds/explosion.wav');
+    game.sounds.loadSound('jul', 'sounds/jul.mp3');
 };
 
 WelcomeState.prototype.draw = function(game, dt, ctx) {
@@ -201,7 +202,6 @@ WelcomeState.prototype.draw = function(game, dt, ctx) {
     ctx.textAlign="center"; 
     ctx.fillText("Qu'est ce qui se passe dans l'espace ?!", game.width / 2, game.height/2 - 40);
     ctx.font="16px aspace";
-
     ctx.fillText("Pressez 'Espace' pour lancer la partie.", game.width / 2, game.height/2);
 };
 
@@ -212,6 +212,7 @@ WelcomeState.prototype.keyDown = function(game, keyCode) {
         game.score = 0;
         game.lives = 3;
         game.moveToState(new niveauIntroState(game.niveau));
+        game.sounds.playSound('jul');
     }
 };
 
