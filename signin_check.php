@@ -22,12 +22,12 @@ if ($resultat)
 }
 else
 {
-      header('Location: error.php');
+      header('Location: error.php#login');
 }
 }
 
 //Si les champs ne sont pas remplis alors on affiche un message d'erreur
 else {
-  header('Location: error.php');
+  header('Location: error.php#input');
 }
 ?>

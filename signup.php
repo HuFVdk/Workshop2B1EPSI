@@ -14,11 +14,12 @@
 <form action="signup_check.php" method="POST" >
   <div class="form-group">
     <label for="username">Pseudo</label>
-    <input type="text" class="form-control" id="username" name="username" placeholder="Pseudo" required>
+    <input type="text" class="form-control" id="username" name="username" placeholder="Pseudo" pattern="[A-Za-z0-9]{3,12}" title="3-12 caractères, lettres et chiffres uniquement" required>
   </div>
   <div class="form-group">
     <label for="password">Mot de passe</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+    title="Minimum 8 caractères, doit contenir une majuscule, une miniscule et un chiffre" required>
   </div>
   <button type="submit" class="btn btn-default">Envoyer</button>
 </form>

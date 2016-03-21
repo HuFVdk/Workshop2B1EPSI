@@ -15,7 +15,7 @@ if (isset($_SESSION['id'])) {
   if ($donnees) {
 
       //On redirige l'intervenant en cas d'erruer
-      header('Location: error.php');
+      header('Location: error.php#vote');
 }
 //Si elle n'existe pas alors on enregistre l'intervenant
     else {
@@ -29,6 +29,6 @@ if (isset($_SESSION['id'])) {
 }
 }
 else {
-  header('Location: error.php');
+  header('Location: error.php#connection');
 }
 ?>

@@ -132,22 +132,28 @@ body {
     transition: all 0.4s;
 }
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-            #gamecontainer {
-                width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #gamecanvas { 
-                width: 800px;
-                height: 600px;
-            }
-            #info {
-                width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+#gamecontainer {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#gamecanvas { 
+    width: 800px;
+    height: 600px;
+}
+#info {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tab div {
+    display: none;
+}
+.tab div:target {
+    display: block;
+}

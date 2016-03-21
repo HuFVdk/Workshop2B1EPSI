@@ -14,7 +14,10 @@
 <div id="starfield"></div>
         <div id="gamecontainer">
         <canvas id="gameCanvas"></canvas>
-        <a id="envoyerScore" class="btn btn-default btn-lg active" role="button" href="">Enregistrer votre score</a>
+        <form method="POST" action="savescore.php">
+            <input type="hidden" id="envoyerScore" name="score">
+            <button type="submit" class="btn btn-default btn-lg" onclick="SaveScore()">Enregistrer mon score</button>
+        </form>
         </div>
         <div id="info">
             <h4>Bougez avec les fléches directionnelles, Tirez avec la barre d'Espace, Les envahisseurs accélérent leur cadence de tir au fur et à mesure </h4>

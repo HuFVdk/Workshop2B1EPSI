@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   if ($donnees) {
 
       //On redirige l'intervenant en cas d'erruer
-      header('Location: error.php');
+      header('Location: error.php#username');
 }
 //Si elle n'existe pas alors on enregistre l'intervenant
     else {
@@ -36,6 +36,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 //Si les champs ne sont pas remplis alors on affiche un message d'erreur
 else {
-  header('Location: error.php');
+  header('Location: error.php#input');
 }
 ?>
