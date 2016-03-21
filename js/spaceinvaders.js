@@ -471,7 +471,7 @@ PlayState.prototype.update = function(game, dt) {
     }
 
     //  Check for failure
-    if(game.lives <= 0) {
+    if(game.lives <= 0.75) {
         game.moveToState(new GameOverState());
     }
 
@@ -479,6 +479,7 @@ PlayState.prototype.update = function(game, dt) {
     if(this.ennemis.length === 0) {
         game.score += this.niveau * 50;
         game.niveau += 1;
+        game.lives += 0.25;
         game.moveToState(new niveauIntroState(game.niveau));
     }
 };
