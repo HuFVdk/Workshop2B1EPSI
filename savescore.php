@@ -13,9 +13,10 @@ include "includes/db_connect.php";
 	while ($donnees = $requete->fetch())
 	{
 		if ($donnees['util_highscore'] < $_POST['score']){
-			$requete2 = $bdd->prepare("UPDATE utilisateur SET util_highscore = :score WHERE util_id = '".$_SESSION['id']."'");
+			$requete2 = $bdd->prepare("UPDATE utilisateur SET util_highscore = :score, util_level = :niveau WHERE util_id = '".$_SESSION['id']."'");
     		$requete2->execute(array(
-      			'score' => $_POST['score'] 
+      			'score' => $_POST['score'],
+      			'niveau' => $_POST['niveau']
       			));
 
     header('Location: index.php');

@@ -14,8 +14,9 @@
 <div id="starfield"></div>
         <div id="gamecontainer">
         <canvas id="gameCanvas"></canvas>
-        <form method="POST" action="savescore.php">
+        <form method="POST" action="score.php">
             <input type="hidden" id="envoyerScore" name="score">
+            <input type="hidden" id="envoyerNiveau" name="niveau">
             <button type="submit" class="btn btn-default btn-lg" onclick="SaveScore()">Enregistrer mon score</button>
         </form>
         </div>

@@ -219,6 +219,8 @@ WelcomeState.prototype.keyDown = function(game, keyCode) {
 function SaveScore() {
     
         document.getElementById("envoyerScore").value = game.score;
+        document.getElementById("envoyerNiveau").value = game.niveau;
+
 }
 
 function GameOverState() {
